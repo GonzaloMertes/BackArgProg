@@ -11,7 +11,7 @@
 	<groupId>com.portfolio</groupId>
 	<artifactId>ap</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ap</name>
+	<name>ap-prueba</name>
 	<description>portfolio argentina programa</description>
 	<properties>
 		<java.version>1.8</java.version>
