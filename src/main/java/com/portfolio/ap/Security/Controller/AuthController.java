@@ -73,7 +73,8 @@ public class AuthController {
        
        return new ResponseEntity(new Mensaje("Usuario guardado"),HttpStatus.CREATED);
    }
-   
+   @RequestMapping("/auth")
+   @CrossOrigin(origins = "https://frontendprueba-43463.web.app")
    @PostMapping("/login")
    public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario,BindingResult bindingResult){
        if(bindingResult.hasErrors())
