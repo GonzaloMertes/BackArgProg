@@ -9,15 +9,27 @@ public class dtoHys {
     private String nombre;
     @NotBlank
     private int porcentaje;
+    @NotBlank
+    private String img;
 
     public dtoHys() {
     }
-
+    
+    
     public dtoHys(String nombre, int porcentaje) {
         this.nombre = nombre;
         this.porcentaje = porcentaje;
     }
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+    
+    
     public String getNombre() {
         return nombre;
     }

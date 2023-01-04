@@ -62,8 +62,8 @@ public class CHys {
         if (shys.existsByNombre(dtohys.getNombre())) {
             return new ResponseEntity(new Mensaje("Esa skill ya existe"), HttpStatus.BAD_REQUEST);
         }
-
-        hys hYs = new hys(dtohys.getNombre(), dtohys.getPorcentaje());
+       
+        hys hYs = new hys(dtohys.getNombre(), dtohys.getPorcentaje(), dtohys.getImg());
         shys.save(hYs);
 
         return new ResponseEntity(new Mensaje("Skill agregada"), HttpStatus.OK);
@@ -86,9 +86,11 @@ public class CHys {
         }
 
         hys hYs = shys.getOne(id).get();
+        
         hYs.setNombre(dtohys.getNombre());
         hYs.setPorcentaje(dtohys.getPorcentaje());
-
+        hYs.setImg(dtohys.getImg());
+        
         shys.save(hYs);
         return new ResponseEntity(new Mensaje("Skill actualizada"), HttpStatus.OK);
 
